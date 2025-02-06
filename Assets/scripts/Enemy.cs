@@ -21,8 +21,9 @@ public class Enemy : MonoBehaviour
 
     public void LookTowards(GameObject Target)
     {
+        //Calculate direction to face towards the target
         Vector3 direction = Target.transform.position - transform.position;
-        direction = new Vector3(direction.x, -90, direction.z);
+        direction = new Vector3(direction.x, 0, direction.z);
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, speed * Time.deltaTime);
     }
