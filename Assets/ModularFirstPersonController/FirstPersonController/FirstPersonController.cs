@@ -339,7 +339,7 @@ public class FirstPersonController : MonoBehaviour
 
         jumpTimer--;
 
-        Debug.Log(canDoubleJump);
+        //Debug.Log(canDoubleJump);
 
         if(Input.GetKeyDown(jumpKey) && !isGrounded && jumpTimer < 0)
         {

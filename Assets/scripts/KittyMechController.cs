@@ -19,6 +19,7 @@ public class KittyMechController : Enemy
 
         animator = GetComponent<Animator>();
 
+        //Main attack hitboxes
         LeftPaw.GetComponent<SphereCollider>().enabled = false;
         RightPaw.GetComponent<SphereCollider>().enabled = false; 
     }
@@ -28,7 +29,8 @@ public class KittyMechController : Enemy
     {
         animatorinfo = this.animator.GetCurrentAnimatorClipInfo(0);
         current_animation = animatorinfo[0].clip.name;
-        Debug.Log("Current animation: " + current_animation);
+
+        //Stop looking towards the player if currently attacking
         if (current_animation != "Armature.007_Pounce Attack")
         {
             if (current_animation != "Armature.007_Armature.007Action")
@@ -36,6 +38,5 @@ public class KittyMechController : Enemy
                 LookTowards(Player);
             }
         }
-        //Debug.Log(LeftPaw + " " + RightPaw);
     }
 }
