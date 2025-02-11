@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 14038946556552455, guid: 145e7d3db5920ff4ab128e83980fd8ce, type: 3}
+  m_Motion: {fileID: 7400000, guid: c892681fb2da54b4fb06ab31b7e6eccf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -227,7 +227,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 5145607595008132059, guid: 145e7d3db5920ff4ab128e83980fd8ce, type: 3}
+  m_Motion: {fileID: 7400000, guid: fa5b1a81a953fd845bf0ef293f4912af, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -307,7 +307,13 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: KittyMech Controller
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: IsAttacking
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
