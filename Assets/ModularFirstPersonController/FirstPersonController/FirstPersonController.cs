@@ -573,10 +573,11 @@ public class FirstPersonController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("CatDetection"))
         {
-            if (collision.gameObject.GetComponentInParent<Cat>().sleeping == true)
+            if (collision.gameObject.GetComponentInParent<Cat>().sleeping == true && !isCrouched)
             {
                 collision.gameObject.GetComponentInParent<Cat>().sleepingCat();
                 collision.gameObject.GetComponentInParent<Cat>().sleeping = false;
+                collision.gameObject.GetComponentInParent<Cat>().fleeing = true;
             }
         }
     }

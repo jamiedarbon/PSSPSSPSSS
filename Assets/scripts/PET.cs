@@ -60,9 +60,9 @@ public class PET : MonoBehaviour
             Debug.Log("petpetpet");
             gameObject.GetComponent<ParticleSystem>().Emit(1);
             gameObject.GetComponent<AudioSource>().Play();
-            if (gameObject.GetComponent<Cat>().hasBeenPet == false)
+            if (gameObject.GetComponentInChildren<Cat>().hasBeenPet == false)
             {
-                gameObject.GetComponent<Cat>().hasBeenPet = true;
+                gameObject.GetComponentInChildren<Cat>().hasBeenPet = true;
                 GetComponent<timer>().petted += 1;
             }
         }
