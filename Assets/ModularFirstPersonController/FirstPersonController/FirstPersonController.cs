@@ -568,6 +568,18 @@ public class FirstPersonController : MonoBehaviour
             gameObject.transform.parent.gameObject.transform.SetParent(null);
         }
     }
+
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("CatDetection"))
+        {
+            if (collision.gameObject.GetComponentInParent<Cat>().sleeping == true)
+            {
+                collision.gameObject.GetComponentInParent<Cat>().sleepingCat();
+                collision.gameObject.GetComponentInParent<Cat>().sleeping = false;
+            }
+        }
+    }
 }
 
 

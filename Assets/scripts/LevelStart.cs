@@ -20,6 +20,13 @@ public class LevelStart : MonoBehaviour
         StartCoroutine(LoadLevel(level));
     }
 
+    // For "return to level select"
+    public void toLevelSelect()
+    {
+        StartCoroutine(LoadLevel(0));
+    }
+
+    // Loads specified level
     private IEnumerator LoadLevel(int level)
     {
         transition.GetComponent<Animator>().Play("Transition");

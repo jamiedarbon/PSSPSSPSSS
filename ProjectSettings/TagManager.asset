@@ -10,6 +10,7 @@ TagManager:
   - Gameplay
   - DontDestroy
   - LevelSelect
+  - CatDetection
   layers:
   - Default
   - TransparentFX
